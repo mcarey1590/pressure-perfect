@@ -1,14 +1,39 @@
-.options label :hover, .options label :focus {
-    border: 2px blue solid;
+/*Global Styles*/
+body{
+    padding-top: 60px; /* 50px for header, 10px for gap */
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: normal;
+    color: #555;
 }
-.selected{
-    border: 2px darkorange solid;
+*:focus { /* Globally remove chrome's outline on focus for various elements*/
+    outline: 0;
 }
-.carpet-picker input[type="radio"]{
-    display: none;
+
+/* navbar */
+.navbar-default {
+    background-color: deepskyblue;
+    border-color: #E7E7E7;
 }
-.board-carpet{
-    height: 300px;
-    width: 145px;
-    border-radius: 2px;
+/* title */
+.navbar-default .navbar-brand {
+    color: #777;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: orange;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: orange;
 }

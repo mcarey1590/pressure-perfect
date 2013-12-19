@@ -7,6 +7,9 @@ angular.module('main', [
         'main.controllers'
     ]).config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'homepageCtrl'})
+        $routeProvider.when('/products', {templateUrl: 'partials/products.html', controller: 'productsCtrl'})
+        $routeProvider.when('/about', {templateUrl: 'partials/about.html', controller: 'aboutCtrl'})
+        $routeProvider.when('/contact', {templateUrl: 'partials/contact.html', controller: 'contactCtrl'})
         .otherwise({ redirectTo: '/' });
 
         $locationProvider.html5Mode(true);
