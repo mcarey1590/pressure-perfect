@@ -1,0 +1,14 @@
+.options label :hover, .options label :focus {
+    border: 2px blue solid;
+}
+.selected{
+    border: 2px darkorange solid;
+}
+.carpet-picker input[type="radio"]{
+    display: none;
+}
+.board-carpet{
+    height: 300px;
+    width: 145px;
+    border-radius: 2px;
+}

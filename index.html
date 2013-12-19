@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="main">
+<head>
+	<link href="static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="static/img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="static/img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="static/img/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="static/img/favicon.png">
+  
+</head>
+
+<body>
+    <div class="container">
+                <ng-include src="'_includes/header.html'"></ng-include>
+                <div ng-view></div>
+                <ng-include src="'_includes/footer.html'"></ng-include>
+    </div>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap/bootstrap.min.js"></script>
+    <script src="static/js/angular/angular.js"></script>
+    <script src="static/js/angular/angular-slugify.js"></script>
+    <script src="static/js/angular/angular-route.min.js"></script>
+    <script src="static/js/angular/angular-animate.js"></script>
+    <script src="static/js/app/app.js"></script>
+    <script src="static/js/app/controllers.js"></script>
+</body>
+</html>
