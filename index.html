@@ -4,6 +4,7 @@
     <base href="/">
 	<link href="static/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Droid+Sans|Lato|Philosopher|Open+Sans:400,300,600|Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="static/img/apple-touch-icon-144-precomposed.png">
@@ -15,11 +16,14 @@
 </head>
 
 <body>
-    <div class="container">
-                <ng-include src="'_includes/header.html'"></ng-include>
-                <div ng-view></div>
-                <ng-include src="'_includes/footer.html'"></ng-include>
-    </div>
+<div class="header-bg-lime">
+    <ng-include src="'_includes/header.html'"></ng-include>
+</div>
+<div ng-view></div>
+<div class="footer-bg">
+    <ng-include src="'_includes/footer.html'"></ng-include>
+</div>
+
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap/bootstrap.min.js"></script>
     <script src="static/js/angular/angular.js"></script>
@@ -28,5 +32,6 @@
     <script src="static/js/angular/angular-animate.js"></script>
     <script src="static/js/app/app.js"></script>
     <script src="static/js/app/controllers.js"></script>
+
 </body>
 </html>
