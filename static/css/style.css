@@ -1,20 +1,36 @@
 /*Global Styles*/
 html{
-    background: #7adaf4; /* Old browsers */
-    background: -moz-linear-gradient(45deg, #7adaf4 0%, #7adaf4 6%, #d0ebf2 31%, #ffffff 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#7adaf4), color-stop(6%,#7adaf4), color-stop(31%,#d0ebf2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* IE10+ */
-    background: linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* W3C */
+    /* background: #7adaf4; /* Old browsers */
+    /* background: -moz-linear-gradient(45deg, #7adaf4 0%, #7adaf4 6%, #d0ebf2 31%, #ffffff 100%); /* FF3.6+ */
+    /* background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#7adaf4), color-stop(6%,#7adaf4), color-stop(31%,#d0ebf2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    /* background: -webkit-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    /* background: -o-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* Opera 11.10+ */
+    /* background: -ms-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* IE10+ */
+    /* background: linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7adaf4', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     height: 100%;
+	background: linear-gradient(rgba(69, 168, 255, 0.5) 50%, rgb(196, 225, 255) 175%);
 }
 body{
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: 'Philosopher', sans-serif;
     font-weight: normal;
     color: #555;
     background: transparent;
+}
+a{
+	-webkit-transition: all 0.1s ease-in-out 0s;
+	-moz-transition: all 0.1s ease-in-out 0s;
+	-o-transition: all 0.1s ease-in-out 0s;
+	transition: all 0.1s ease-in-out 0s;
+	text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: 'Philosopher', sans-serif;
+	text-decoration: none;
+}
+i{
+	cursor: pointer;
+	transition: all 0.1s ease-in-out 0s;
 }
 *:focus { /* Globally remove chrome's outline on focus for various elements*/
     outline: 0;
@@ -34,20 +50,22 @@ body{
 .header-icon{
     display: block;
 }
+.header-icon .logo{
+    height: 100px;
+	padding: 10px;
+}
 .header-icon i{
-    color: black;
+    color: #fff;
     margin: 15px;
-    opacity: .5;
 }
 .header-icon i:hover, .header-icon i:active{
-    color: #C6ED2C;
-    opacity: 1;
+    color: rgb(17, 69, 132);
 }
 #model{
-    padding: 50px;
-    background:url(http://sports-tips.net/images/Tennis-Ball-icon.png) center no-repeat;
-    opacity: .5;
-    background-size: 50%;
+    padding: 0px;
+
+    opacity: 1.0;
+    background-size: 25%;
 }
 #model-buttons{
 }
@@ -158,7 +176,7 @@ label textarea {
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -o-transition: all 0.5s;
-    transition: all 0.5s;
+    transition: all 0.5s;	
 }
 .form-controls .btn-send:hover {
     background: #55912b;
@@ -252,4 +270,22 @@ label textarea {
 }
 .ie-lt9 .no-placeholder {
     display: block;
+}
+/* Buttons */
+.btn-tennis{
+	color: #fff;
+	background: linear-gradient(rgba(221, 238, 7, 1.0) 50%, rgba(150, 166, 5, 1.0) 175%);
+	border: none;
+	box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.2);
+}
+.btn-blue{
+    color: #fff;
+    background: linear-gradient(rgb(29, 135, 255) 50%, rgb(17, 69, 132) 175%);
+    border: none;
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.1s ease-in-out 0s;-moz-transition: all 0.1s ease-in-out 0s;-ms-transition: all 0.1s ease-in-out 0s;-o-transition: all 0.1s ease-in-out 0s;transition: all 0.1s ease-in-out 0s;
+}
+.btn-blue:hover{
+    color: #fff;
+    background: linear-gradient(rgb(29, 135, 255) 50%, rgb(17, 69, 132) 125%);
 }
