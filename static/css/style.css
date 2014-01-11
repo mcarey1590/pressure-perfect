@@ -1,124 +1,255 @@
-/* Testing */
-
 /*Global Styles*/
+html{
+    background: #7adaf4; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #7adaf4 0%, #7adaf4 6%, #d0ebf2 31%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#7adaf4), color-stop(6%,#7adaf4), color-stop(31%,#d0ebf2), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(45deg, #7adaf4 0%,#7adaf4 6%,#d0ebf2 31%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7adaf4', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    height: 100%;
+}
 body{
-    font-family: 'Philosopher', sans-serif; /* google font import on index.html, currently testing */
+    font-family: Georgia, "Times New Roman", Times, serif;
     font-weight: normal;
-    color: #999;
-	background-color: #666;	
+    color: #555;
+    background: transparent;
 }
-*:focus {outline: 0;} 						/* Globally remove chrome's outline on focus for various elements*/
-a{
-	-webkit-transition: all 0.1s ease-in-out 0s;
-	-moz-transition: all 0.1s ease-in-out 0s;
-	-o-transition: all 0.1s ease-in-out 0s;
-	transition: all 0.1s ease-in-out 0s; 	/* All links will smooth transition between changed attributes for 0.1s */
-	font-size: 16px;						/* link font size default to 16px site wide */
+*:focus { /* Globally remove chrome's outline on focus for various elements*/
+    outline: 0;
 }
 
-a:link {color:#555;text-decoration:none;}  	/* unvisited link */
-a:visited {color:#555;text-decoration:none;}	/* visited link */
-a:hover {color:#777;text-decoration:none;} 	/* mouse over link */
-a:active {color:#777;text-decoration:none;}	/* selected link */
+.tennis-yellow-color{
+    color: #C6ED2C;
+}
+.tennis-yellow-bg{
+    background-color: #C6ED2C;
+}
+.popover{
+    max-width:500px;
+}
 
-.footer-bg{ 								/* 100% footer width background color to match header style */
-	width: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	color: rgba(221, 238, 7, 1.0);
-}
-.header-bg-lime{	/* index.html class for the header container */		 
-	width: 100%;
-	border-bottom: none;
-	-webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-	background: linear-gradient(rgba(221, 238, 7, 1.0) 50%, rgba(150, 166, 5, 1.0) 175%);
-}
-.header-bg-blue{ 	/* index.html class for the header container */	
-	width: 100%;
-	border-bottom: none;
-	-webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
-	background: linear-gradient(rgba(20, 180, 247, 1.0) 50%, rgba(14, 141, 226, 1.0) 200%);
-}
-/* bootstrap overrides misc*/
-.navbar-brand{
-	font-size: 26px;
-	font-weight: bold;
-}
-/* bootstrap overrides for centering the navbar */
-.navbar{margin-bottom:0px;}
-.navbar-fixed-top{position:relative;}
 /* navbar */
-.navbar-lime{
-	background: linear-gradient(rgba(221, 238, 7, 1.0) 50%, rgba(150, 166, 5, 1.0) 175%);
-	border-bottom: none;
+.header-icon{
+    display: block;
 }
-.navbar-blue{
-	background: linear-gradient(rgba(20, 180, 247, 1.0) 50%, rgba(14, 141, 226, 1.0) 200%);
-	border-bottom: none;
+.header-icon i{
+    color: black;
+    margin: 15px;
+    opacity: .5;
 }
-.navbar-lime a:link,
-.navbar-lime a:visited{
-	color:#555;	
+.header-icon i:hover, .header-icon i:active{
+    color: #C6ED2C;
+    opacity: 1;
 }
-.navbar-lime ul>li>a:hover,
-.navbar-lime ul>li>a:active{
-	color:#444;
-	background-color: rgba(230, 255, 0, 1.0);
-	-webkit-box-shadow: 3px 0px 6px -2px rgba(0, 0, 0, 0.2) inset, -3px 0px 6px -2px rgba(0, 0, 0, 0.2) inset;
-    -moz-box-shadow: 3px 0px 6px -2px rgba(0, 0, 0, 0.2) inset, -3px 0px 6px -2px rgba(0, 0, 0, 0.2) inset;
-    box-shadow: 3px 0px 6px -2px rgba(0, 0, 0, 0.2) inset, -3px 0px 6px -2px rgba(0, 0, 0, 0.2) inset;
+#model{
+    padding: 50px;
+    background:url(http://sports-tips.net/images/Tennis-Ball-icon.png) center no-repeat;
+    opacity: .5;
+    background-size: 50%;
 }
-.navbar-blue a:link,
-.navbar-blue a:visited{
-	color: #a9e0f7;
-}
-.navbar-blue ul>li>a:hover,
-.navbar-blue ul>li>a:active{
-	color: #fff;
-	background: linear-gradient(rgba(20, 180, 247, 0.5) 50%, rgba(14, 141, 226, 0.5) 200%);	
-}
-.navbar-lime .navbar-header > a:link,
-.navbar-lime .navbar-header > a:visited,
-.navbar-lime .navbar-header > a:active{
-	color: #555;
-}
-.navbar-lime .navbar-header > a:hover{
-	color: #444;
-	-webkit-box-shadow: 3px 0px 6px -2px rgba(0, 0, 0, 0.3) inset, -3px 0px 6px -2px rgba(0, 0, 0, 0.3) inset;
-	-moz-box-shadow: 3px 0px 6px -2px rgba(0, 0, 0, 0.3) inset, -3px 0px 6px -2px rgba(0, 0, 0, 0.3) inset;
-	box-shadow: 3px 0px 6px -2px rgba(0, 0, 0, 0.3) inset, -3px 0px 6px -2px rgba(0, 0, 0, 0.3) inset;
-	background-color: rgba(230, 255, 0, 1.0);
-}
-.navbar-blue .navbar-header > a:link,
-.navbar-blue .navbar-header > a:visited,
-.navbar-blue .navbar-header > a:active{
-	color: #a9e0f7;
-}
-.navbar-blue .navbar-header > a:hover{
-	color: #fff;
-}
-/* img */
-img{
-	border: none;
-	outline: 0;
-}
-img.quote-left{
-width:44px;
-height:40px;
-background:url(/static/img/img-punctuation.png) 0 0;
+#model-buttons{
 }
 
-img.quote-right{
-width:44px;
-height:40px;
-background:url(/static/img/img-punctuation.png) 44px 0;
+/* Contact Form */
+
+form.hidden {
+    position: absolute;
+    width: 20em;
+    top: -100em;
+    -webkit-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -ms-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    transform: scale(0.25);
+    -webkit-transition: -webkit-transform 0.5s ease-in, top 0.5s ease-in;
+    -webkit-transition-delay: 0s, 0.4s;
+    -moz-transition: -moz-transform 0.5s ease-in, top 0.5s ease-in 0.4s;
+    -o-transition: -o-transform 0.5s ease-in, top 0.5s ease-in 0.4s;
+    transition: transform 0.5s ease-in, top 0.5s ease-in 0.4s;
 }
 
-img.tilde{
-width:68px;
-height: 26px;
-background:url(/static/img/img-punctuation.png) 0 -40px;
+legend {
+    background: #5c8ab8;
+    color: white;
+    padding: 1em 1.25em;
+    font-size: 1.75em;
+    border-radius: 0.2em 0.2em 0 0;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+legend:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: #5c8ab8 transparent transparent;
+    border-width: 0.4em;
+    left: 2.2em;
+    top: 100%;
+}
+
+fieldset {
+    background: #ddddde;
+    width: 100%;
+    padding: 1.75em 0 0.25em;
+}
+
+label {
+    display: block;
+    color: #646d76;
+    position: relative;
+    margin: 0 2em 0.75em;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+label input, label textarea {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    margin: 0.25em 0;
+    padding: 0.5em 0.75em;
+    border: none;
+    background: #f9f9fa;
+    border-radius: 0.2em;
+    font-family: "Raleway", sans-serif;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+label input:focus, label textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+label textarea {
+    min-height: 6em;
+}
+
+.form-controls {
+    padding: 0.25em 2em 1.5em;
+    background: #ddddde;
+    border-radius: 0 0 0.2em 0.2em;
+}
+.form-controls .btn {
+    color: white;
+    padding: 1em 0;
+    border-radius: 0.25em;
+    border: none;
+    display: block;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+}
+.form-controls .btn-send {
+    background: #60a531;
+    width: 100%;
+    font-size: 1.25em;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.form-controls .btn-send:hover {
+    background: #55912b;
+}
+.form-controls [disabled] {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+    opacity: 0.5;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    cursor: default;
+}
+
+.required, .ok, .invalid {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.required:before, .ok:before, .invalid:before {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    padding: 0.2em;
+    position: absolute;
+    top: 0.1em;
+    right: 0.1em;
+    font-size: 1.5em;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.required:before {
+    content: "\f069";
+    color: #efefef;
+}
+
+.invalid:before {
+    content: "\f057";
+    color: rgba(165, 49, 57, 0.5);
+}
+
+.ok:before {
+    content: "\f058";
+    color: #60a531;
+    -webkit-transition: -webkit-transform 0.5s linear;
+    -moz-transition: -moz-transform 0.5s linear;
+    -o-transition: -o-transform 0.5s linear;
+    transition: transform 0.5s linear;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.sent {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-transition-delay: 1s;
+    -moz-transition: all 0.5s ease-in-out 1s;
+    -o-transition: all 0.5s ease-in-out 1s;
+    transition: all 0.5s ease-in-out 1s;
+}
+.sent.hidden {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.sent h1 {
+    font-size: 3em;
+    text-align: center;
+}
+.sent h1 small {
+    font-size: 0.5em;
+    font-weight: 400;
+    display: block;
+    text-align: right;
+    margin-top: 0.5em;
+}
+
+.no-placeholder {
+    display: none;
+}
+.ie-lt9 .no-placeholder {
+    display: block;
 }

@@ -4,16 +4,12 @@
 
 angular.module('main.controllers', []).
     controller('homepageCtrl', ['$scope', function($scope) {
-        $scope.message = "Home Page";
+        $scope.modelHeight = (window.innerHeight *.4 > 320) ? window.innerHeight * .4 : 320;
+        $scope.modelWidth = (window.innerWidth *.4 > 320) ? window.innerWidth *.4 : 320;
     }]).
     controller('headerCtrl', ['$scope', '$location', function($scope, $location) {
-        $scope.getClass = function(path) {
-            if ($location.path().substr(0, path.length) == path) {
-                return "active"
-            } else {
-                return ""
-            }
-        };
+        $scope.contactPopover = "<p>Phone: ###-###-####</p><p>Email: sales@pressure-perfect.com</p>";
+        $scope.contactPopoverTitle = "Contact Information";
     }]).
     controller('productsCtrl', ['$scope', function($scope) {
         $scope.message = "Product Page";
@@ -22,5 +18,4 @@ angular.module('main.controllers', []).
         $scope.message = "About Page";
     }]).
     controller('contactCtrl', ['$scope', function($scope) {
-        $scope.message = "Contact Page";
     }]);

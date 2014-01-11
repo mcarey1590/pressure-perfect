@@ -4,7 +4,8 @@
 angular.module('main', [
         'ngRoute',
         'ngAnimate',
-        'main.controllers'
+        'main.controllers',
+        'ui.bootstrap'
     ]).config(function ($routeProvider, $locationProvider) {
         $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'homepageCtrl'})
         $routeProvider.when('/products', {templateUrl: 'partials/products.html', controller: 'productsCtrl'})

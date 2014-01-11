@@ -1,12 +1,28 @@
-<h3 class="text-center">{{message}}</h3>
 <div class="container">
     <div class="row clearfix">
-        <div class="col-md-12 text-center">
-            <div class="jumbotron">
-                <h1>Hello, world!</h1>
-                <p>This is a test of the emergency broadcast system. Please standby.</p>
-                <p><a class="btn btn-primary btn-lg" role="button">Nope</a></p>
-            </div>
+        <div class="col-md-offset-2 col-md-8 text-center">
+            <h2>How long does a tennis ball last you?</h2>
+            <h2>On average, our tennis balls last 3x longer</h2>
+        </div>
+    </div>
+    <div class="row text-center" id="model">
+        <iframe frameborder="0" height="{{ modelHeight }}" width="{{ modelWidth }}" allowFullScreen
+                webkitallowfullscreen="true"
+            mozallowfullscreen="true" src="http://sketchfab.com/mkji3hf0ba?autostart=1&transparent=1&autospin=1&controls=0">
+        </iframe>
+    </div>
+    <div class="row text-center" id="model-buttons">
+        <div class="col-md-offset-3 col-md-2 text-center">
+            <button class="btn btn-lg btn-info tennis-yellow-bg">
+                <i class="fa fa-refresh"></i> Load</button>
+        </div>
+        <div class="col-md-2 text-center">
+            <button class="btn btn-lg btn-info tennis-yellow-bg">
+                <i class="fa fa-pause"></i> Pause</button>
+        </div>
+        <div class="col-md-2 text-center">
+            <button class="btn btn-lg btn-info tennis-yellow-bg">
+                <i class="fa fa-play"></i> Play</button>
         </div>
     </div>
 </div>
